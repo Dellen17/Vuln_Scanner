@@ -87,9 +87,9 @@ ehthumbs.db
 Thumbs.db
 
 # Scanner specific
-screenshots/           # Auto-generated screenshots
-*.json                 # Scan reports (except example)
-!example_report.json   # Keep one example report
+#screenshots/           # Auto-generated screenshots
+#*.json                 # Scan reports (except example)
+#!example_report.json   # Keep one example report
 scan_results/          # Any scan results directory
 logs/                  # Log files
 

@@ -1,0 +1,44 @@
+{
+  "target": "192.168.1.50",
+  "timestamp": "2025-10-03T21:07:06.370590+00:00",
+  "ports": [
+    {
+      "port": 80,
+      "state": "open",
+      "banner": "HTTP/1.1 200 OK\r\nDate: Fri, 03 Oct 2025 21:07:05 GMT\r\nServer: Apache/2.4.65 (Debian)\r\nLast-Modified: Thu, 29 May 2025 19:23:17 GMT\r\nETag: \"29cf-6364b3ad32860\"\r\nAccept-Ranges: bytes\r\nContent-Length: 10703\r\nVary: Accept-Encoding\r\nContent-Type: text/html",
+      "service": "apache",
+      "error": null
+    }
+  ],
+  "http_headers": {
+    "http_80": {
+      "url": "http://192.168.1.50:80",
+      "status_code": 200,
+      "headers_found": {},
+      "headers_missing": [
+        "Content-Security-Policy",
+        "X-Frame-Options",
+        "X-Content-Type-Options",
+        "Strict-Transport-Security",
+        "Referrer-Policy",
+        "Permissions-Policy"
+      ],
+      "error": null
+    }
+  },
+  "tls_cert": {},
+  "vulnerabilities": [
+    "Multiple security headers missing on http_80: Content-Security-Policy, X-Frame-Options, X-Content-Type-Options, Strict-Transport-Security, Referrer-Policy, Permissions-Policy",
+    "Clickjacking vulnerability: X-Frame-Options missing on http_80",
+    "MIME sniffing vulnerability: X-Content-Type-Options missing on http_80"
+  ],
+  "screenshots": [
+    {
+      "url": "http://192.168.1.50:80",
+      "filepath": "screenshots/192_168_1_50_port_80_1759525626.png",
+      "timestamp": "2025-10-03T21:07:28.743040+00:00"
+    }
+  ],
+  "risk_score": 29,
+  "errors": []
+}
