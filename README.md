@@ -1,6 +1,13 @@
 Mini Vulnerability Scanner
 A modular, educational CLI vulnerability scanner for security testing of systems you own or have explicit permission to test.
 
+🛠 Skills Demonstrated
+- Python packaging & CLI tools (`setup.py`, `__main__.py`)
+- Networking: Socket port scanning, HTTP analysis (`requests`)
+- Security: Header checks, TLS cert validation, vuln detection
+- Concurrency: `ThreadPoolExecutor` for fast scans
+- Ethical design: Safety warnings & local-only defaults
+
 🚀 Features
 Port Scanning: TCP connect scanning with banner grabbing and service detection
 
@@ -41,6 +48,8 @@ Scanner/
 ├── requirements.txt        # Python dependencies
 ├── setup.py               # Package installation
 └── README.md              # This file
+
+
 🛠 Installation
 Method 1: Install as Package (Recommended)
 bash
@@ -67,6 +76,8 @@ python scripts/scan.py --target 192.168.1.50 --screenshot
 🎯 Usage
 Basic Scan
 bash
+For organization, optionally create `screenshots/` and `json_reports/` folders
+
 # Scan a target with default ports (21,22,80,443,3306)
 vulnscan --target 192.168.1.50
 
@@ -138,15 +149,12 @@ Safety Reminder: Always displays responsible usage notice
 
 Private Range Detection: Automatically identifies local/private IP ranges
 
-📝 Output Examples
-Rich Console Output
-The scanner provides beautiful, color-coded output with:
-
-Tables for open ports, HTTP headers, and vulnerabilities
-
-Panels for safety warnings and scan information
-
-Color-coded risk assessment (Green/Yellow/Red)
+📝 Output Examples:
+-Rich Console Output
+-The scanner provides beautiful, color-coded output with:
+-Tables for open ports, HTTP headers, and vulnerabilities
+-Panels for safety warnings and scan information
+-Color-coded risk assessment (Green/Yellow/Red)
 
 JSON Reports
 Save detailed scan results for later analysis:
